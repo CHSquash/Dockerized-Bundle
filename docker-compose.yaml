@@ -1,0 +1,25 @@
+jenkins:
+  restart: always
+  image: chungho/jenkins
+  volumes:
+    - ./jenkins_home/jobs:/var/jenkins_home/jobs
+    - ./jenkins_home/config:/var/jenkins_home/config
+    - ./jenkins_home/plugins:/var/jenkins_home/plugins
+  ports:
+    - 8081:8080
+    - 50000:50000
+
+swagger:
+  restart: always
+  image: chungho/swagger-tool
+  ports:
+    - 8080:8080
+
+proxy:
+  restart: always
+  image: chungho/nginx
+  ports:
+    - 80:80
+  links:
+    - swagger
+    - jenkins

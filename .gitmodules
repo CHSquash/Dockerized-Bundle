@@ -1,0 +1,9 @@
+[submodule "Dockerized-Nginx"]
+	path = Dockerized-Nginx
+	url = https://github.com/CHSquash/Dockerized-Nginx.git
+[submodule "Dockerized-Swagger-tool"]
+	path = Dockerized-Swagger-tool
+	url = https://github.com/CHSquash/Dockerized-Swagger-tool.git
+[submodule "Dockerized-Jenkins"]
+	path = Dockerized-Jenkins
+	url = https://github.com/CHSquash/Dockerized-Jenkins.git
